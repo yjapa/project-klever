@@ -6,14 +6,18 @@ const agent = new https.Agent({
 });
 
 const detailsAddress = async (address) => {
-  const { data } = await axios
-  .get(
-    `https://blockbook-bitcoin.tronwallet.me/api/v2/address/${address}`,
-    { httpsAgent: agent }
-  );
+    const response = await axios
+    .get(
+      `https://blockbook-bitcoin.tronwallet.me/api/v2/address/${address}`,
+      { httpsAgent: agent }
+    );
+  return response;
 
-  return data;
 }
+
+
+
+
 
 module.exports = {
   detailsAddress,
