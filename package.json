@@ -1,0 +1,20 @@
+{
+  "name": "klever-challenger",
+  "version": "1.0.0",
+  "description": "Klever Challenger API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "author": "Wesley Yudi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-rescue": "^1.1.31",
+    "https": "^1.0.0",
+    "mongoose": "^6.3.2",
+    "nodemon": "^2.0.16"
+  }
+}
