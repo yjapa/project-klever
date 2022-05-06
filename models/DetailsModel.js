@@ -1,6 +1,5 @@
 const axios = require('axios');
 const https = require('https');
-const { balanceAddress } = require('./BalanceModel')
 
 const agent = new https.Agent({
   rejectUnauthorized: false
@@ -13,22 +12,7 @@ const detailsAddress = async (address) => {
     { httpsAgent: agent }
   );
 
-  // const teste = await balanceAddress(address);
-
-  const details = {
-    address: data.address,
-    balance: data.balance,
-    totalTx: data.txs,
-    // balance: {
-    //   confirmed: teste.data.confirmed,
-    //   unconfirmed: teste.data.unconfirmed,
-    // },
-    total: {
-      sent: data.totalSent,
-      received: data.totalReceived,
-    },
-  };
-  return details;
+  return data;
 }
 
 module.exports = {
