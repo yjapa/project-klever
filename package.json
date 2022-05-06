@@ -12,8 +12,10 @@
   "dependencies": {
     "axios": "^0.27.2",
     "express": "^4.18.1",
+    "express-joi-validation": "^5.0.1",
     "express-rescue": "^1.1.31",
     "https": "^1.0.0",
+    "joi": "^17.6.0",
     "mongoose": "^6.3.2",
     "nodemon": "^2.0.16"
   }
