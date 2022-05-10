@@ -6,13 +6,6 @@ const createTransaction = async (obj) => {
   return create
 };
 
-const getTransactions = async () => {
-  const transactions = await sendTransactionModel.getTransactions();
-
-  return transactions;
-};
-
 module.exports = {
   createTransaction,
-  getTransactions,
 };
