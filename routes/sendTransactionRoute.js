@@ -1,11 +1,10 @@
 const express = require('express');
 const rescue = require('express-rescue');
-const { getTransactions, createTransaction } = require('../controllers/sendTransactionController');
+const { createTransaction } = require('../controllers/sendTransactionController');
+const { sendAmountValidation } = require('../middlewares');
 
 const transaction = express.Router();
 
-transaction.post('/', rescue(createTransaction));
-
-transaction.get('/', rescue(getTransactions));
+transaction.post('/', sendAmountValidation, rescue(createTransaction));
 
 module.exports = transaction;
