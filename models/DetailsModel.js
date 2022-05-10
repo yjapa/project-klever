@@ -11,13 +11,10 @@ const detailsAddress = async (address) => {
       `https://blockbook-bitcoin.tronwallet.me/api/v2/address/${address}`,
       { httpsAgent: agent }
     );
+
   return response;
 
 }
-
-
-
-
 
 module.exports = {
   detailsAddress,
