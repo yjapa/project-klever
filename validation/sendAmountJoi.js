@@ -4,7 +4,7 @@ const FIELD_REQUIRED = 'All fields must be filled';
 const sendAmountJoi = Joi.object({
   txid: Joi.string().required().length(64).messages({
     'string.base': '"txid" must be a string',
-    'string.length': 'Invalid txid',
+    'string.length': 'Invalid txid, decoded address is of unknown format',
     'any.required': FIELD_REQUIRED,
     'string.empty': FIELD_REQUIRED,
   }),
