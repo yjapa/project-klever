@@ -15,11 +15,20 @@ const sumBalance = (data) => data.reduce((acc, curr) => {
 });
 
 const balanceAddress = async (address) => {
-  const data = await BalanceModel.balanceAddress(address);
+  try {
+    const data = await BalanceModel.balanceAddress(address);
+  
+    const balance = sumBalance(data);
+  
+    return balance;
 
-  const balance = sumBalance(data);
-
-  return balance;
+  } catch (err) {
+    const error = {
+      code: 'notFound',
+      message: 'Address not found',
+    };
+    throw error;
+  }
 };
 
 module.exports = {
