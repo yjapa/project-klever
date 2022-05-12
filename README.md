@@ -4,9 +4,8 @@
 
 O Projeto consiste numa API REST que realiza consultas nos seguintes endpoints:
 
-<div id='addressdetails'/>  
+### Address Details
 
-### Address Details 
 Este endpoint recebe um endereço como parâmetro, retornando os saldos e transações.
 ```bash
 https://blockbook-bitcoin.tronwallet.me/api/v2/address/{address}
@@ -169,16 +168,20 @@ npm start
 
 ## Requisições
 
+### Summary
+
+* A rota padrão `/` retorna um sumário com a descrição de todas as rotas da aplicação.
+
 ### Address Details
 
-* Para retornar saldos e transações de um endereço de Bitcoin, devemos acessar o endpoint `GET /details/:address` passando na `URL` o parâmetro
+* Para retornar saldos e transações de um endereço de Bitcoin, devemos acessar o endpoint `GET /details/:address` passando na `URL` o parâmetro.
 * Exemplo: 
 ```bash
 http://localhost:3001/details/bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r
 ```
 ### Balance
 
-* Para retornar uma lista de transações confirmadas e não confirmadas, devemos acessar o endpoint `GET /balance/:address` passando na `URL` o parâmetro
+* Para retornar uma lista de transações confirmadas e não confirmadas, devemos acessar o endpoint `GET /balance/:address` passando na `URL` o parâmetro.
 * Exemplo: 
 ```bash
 http://localhost:3001/balance/bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r
@@ -186,7 +189,7 @@ http://localhost:3001/balance/bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r
 
 ### Send btc
 
-* Para enviar certa quantidade de btc, devemos acessar o endpoint `POST /send`
+* Para enviar certa quantidade de btc, devemos acessar o endpoint `POST /send`.
 * O endpoint deve receber a estrutura com os seguintes dados:
 ```javascript
 {
@@ -196,7 +199,7 @@ http://localhost:3001/balance/bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r
 ```
 ### Receive Transaction
 
-* Para retornar dados "normalizados" sobre a transação, devemos acessar o endpoint `GET /tx/:transaction` passando na `URL` o parâmetro
+* Para retornar dados "normalizados" sobre a transação, devemos acessar o endpoint `GET /tx/:transaction` passando na `URL` o parâmetro.
 * Exemplo: 
 ```bash
 http://localhost:3001/tx/e93e4d9e0ceb7d43c9d0932114391021c53fc1f25a8ee1101084818d81186cc5
