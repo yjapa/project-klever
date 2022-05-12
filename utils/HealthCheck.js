@@ -11,11 +11,22 @@ const check = async () => {
 
   const address = "bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r";
   const transaction = "3654d26660dcc05d4cfb25a1641a1e61f06dfeb38ee2279bdb049d018f1830ab";
-  
-  const checkDetails = await detailsAddress(address);
-  const checkBalance = await balanceAddress(address);
-  const checkTransaction = await createTransaction(obj);
-  const checkReceive = await receiveTransaction(transaction);
+
+  const statusAPI = async (func, param) => {
+    try {
+      const status = await func(param);
+      if (status) {
+        return "UP"
+      }
+    } catch(err) {
+      return "DOWN"
+    }
+  }
+
+  const checkDetails = await statusAPI(detailsAddress, address)
+  const checkBalance = await statusAPI(balanceAddress, address);
+  const checkTransaction = await statusAPI(createTransaction, obj);
+  const checkReceive = await statusAPI(receiveTransaction, transaction);
 
   const healthCheck = {
   uptime: process.uptime(),
@@ -25,22 +36,22 @@ const check = async () => {
     {
       name: "/details/{address}",
       type: "internal",
-      status: checkDetails ? "UP" : "DOWN"
+      status: checkDetails
     },
     {
       name: "/balance/{address}",
       type: "internal",
-      status: checkBalance ? "UP" : "DOWN"
+      status: checkBalance
     },
     {
       name: "/send",
       type: "internal",
-      status: checkTransaction ? "UP" : "DOWN"
+      status: checkTransaction
     },
     {
       name: "/tx/{tx}",
       type: "internal",
-      status: checkReceive ? "UP" : "DOWN"
+      status: checkReceive
     }
   ]
 };
