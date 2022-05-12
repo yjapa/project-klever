@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const { connection } = require('./connection');
 const middlewares = require('./middlewares');
-const { DetailsRoute, BalanceRoute, sendTransactionRoute, receiveTransactionRoute, HealthCheck } = require('./routes');
+const { DetailsRoute, BalanceRoute, sendTransactionRoute, receiveTransactionRoute, HealthCheckRoute, SummaryRoute } = require('./routes');
 require('dotenv');
 
 const NODE_ENV = process.env.NODE_ENV;
@@ -15,7 +15,8 @@ const startServer = () => {
 
 startServer();
 
-app.use('/health', HealthCheck);
+app.use('/', SummaryRoute);
+app.use('/health', HealthCheckRoute);
 app.use('/details', DetailsRoute);
 app.use('/balance', BalanceRoute);
 app.use('/send', sendTransactionRoute);
