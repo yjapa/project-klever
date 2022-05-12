@@ -2,13 +2,17 @@ const express = require('express');
 const app = express();
 const { connection } = require('./connection');
 const middlewares = require('./middlewares');
-const { DetailsRoute, BalanceRoute, sendTransactionRoute, receiveTransactionRoute, HealthCheck } = require('./routes')
+const { DetailsRoute, BalanceRoute, sendTransactionRoute, receiveTransactionRoute, HealthCheck } = require('./routes');
+require('dotenv');
+
+const NODE_ENV = process.env.NODE_ENV;
+
 
 app.use(express.json());
 
 const startServer = () => {
-  connection();
-}
+	connection(NODE_ENV);
+};
 
 startServer();
 
