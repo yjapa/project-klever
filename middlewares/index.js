@@ -5,9 +5,9 @@ const transactionValidation = require('./transactionValidation');
 const sendAmountValidation = require('./sendAmountValidation');
 
 module.exports = {
-  domainError,
-  error,
-  addressValidation,
-  transactionValidation,
-  sendAmountValidation,
+	domainError,
+	error,
+	addressValidation,
+	transactionValidation,
+	sendAmountValidation,
 };
