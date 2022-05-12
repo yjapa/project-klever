@@ -148,11 +148,14 @@ npm install
 
 ## Variáveis de Ambiente
 
-Na raiz do projeto, crie um arquivo .env para configurar a variável de ambiente e inicializar a API na porta que desejar. Por exemplo:
+Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambiente e inicializar a API na porta que desejar. Acrescente tambén a variavel NODE_ENV abaixo:
 
 ```bash
 PORT=3001
+NODE_ENV=mongodb://localhost:27017/klever_challenger_test
 ```
+
+A váriavel NODE_ENV garante que os testes da aplicação serão feitos no banco de testes.
 
 ## Executando aplicação
 
