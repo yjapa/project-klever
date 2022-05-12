@@ -131,7 +131,7 @@ A aplicação foi desenvolvida com os seguintes requisitos:
 * Utilizado métodos HTTP's para realizar as requisições;
 * Testes de integração;
 * Arquitetura MSC;
-* Banco de dados: MongoDB;
+* Banco de dados: MongoDB conectado com Mongoose;
 
 ## Técnologias usadas
 
