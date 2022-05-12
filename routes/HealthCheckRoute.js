@@ -6,9 +6,9 @@ const health = express.Router();
 
 health.get('/', async (_req, res) => {
 
-  const healthCheck = await HealthCheck.check();
+	const healthCheck = await HealthCheck.check();
 
-  return res.status(StatusCode.OK).send(healthCheck);
+	return res.status(StatusCode.OK).send(healthCheck);
 });
 
 module.exports = health;

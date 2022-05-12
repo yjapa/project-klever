@@ -5,9 +5,9 @@ const receiveTransactionRoute = require('./receiveTransactionRoute');
 const HealthCheck = require('./HealthCheckRoute');
 
 module.exports = {
-  DetailsRoute,
-  BalanceRoute,
-  sendTransactionRoute,
-  receiveTransactionRoute,
-  HealthCheck,
+	DetailsRoute,
+	BalanceRoute,
+	sendTransactionRoute,
+	receiveTransactionRoute,
+	HealthCheck,
 };

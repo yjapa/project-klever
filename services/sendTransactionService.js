@@ -2,18 +2,18 @@ const sendTransactionModel = require('../models/sendTransactionModel');
 const generateIdTransaction = require('../utils/generateIdTransaction');
 
 const createTransaction = async (amount) => {
-  const txid = generateIdTransaction();
+	const txid = generateIdTransaction();
 
-  const obj = {
-    txid,
-    amount,
-  }
+	const obj = {
+		txid,
+		amount,
+	};
 
-  const create = await sendTransactionModel.createTransaction(obj);
+	const create = await sendTransactionModel.createTransaction(obj);
 
-  return create
+	return create;
 };
 
 module.exports = {
-  createTransaction,
+	createTransaction,
 };
