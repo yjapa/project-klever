@@ -7,7 +7,6 @@ require('dotenv');
 
 const NODE_ENV = process.env.NODE_ENV;
 
-
 app.use(express.json());
 
 const startServer = () => {
