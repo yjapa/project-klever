@@ -5,12 +5,12 @@ const middlewares = require('./middlewares');
 const { DetailsRoute, BalanceRoute, sendTransactionRoute, receiveTransactionRoute, HealthCheckRoute, SummaryRoute } = require('./routes');
 require('dotenv');
 
-const NODE_ENV = process.env.NODE_ENV;
+const URL = 'mongodb://localhost:27017/';
 
 app.use(express.json());
 
 const startServer = () => {
-	connection(NODE_ENV);
+	connection(URL);
 };
 
 startServer();
