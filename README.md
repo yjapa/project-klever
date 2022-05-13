@@ -154,7 +154,7 @@ O projeto contém um arquivo `docker-compose.yml`. Utilize na raiz do projeto o 
 npm run compose:up
 ```
 
-Este arquivo cria um container com uma imagem do mongoDB no docker. O usuário e senha padrão do arquivo é respectivamente "root" e "password".
+Este arquivo cria um container com uma imagem do mongoDB no docker. O usuário e senha padrão do arquivo é respectivamente `root` e `password`.
 
 Após subir o container, utilize os seguintes comandos no terminal para autenticar o seu usuário:
 
