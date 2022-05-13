@@ -196,6 +196,7 @@ npm start
 ### Summary
 
 * A rota padrão `/` retorna um sumário com a descrição de todas as rotas da aplicação.
+* Abra no navegador com a porta correta, por exemplo http://localhost:3001/, para visualizar melhor todas os endpoints e suas respectivas descrições.
 
 ### Address Details
 
