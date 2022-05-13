@@ -19,7 +19,7 @@ app.use('/', SummaryRoute);
 app.use('/health', HealthCheckRoute);
 app.use('/details', DetailsRoute);
 app.use('/balance', BalanceRoute);
-app.use('/send', sendTransactionRoute);
+// app.use('/send', sendTransactionRoute);
 app.use('/tx', receiveTransactionRoute);
 
 app.use(middlewares.domainError);
