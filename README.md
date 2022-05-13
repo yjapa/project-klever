@@ -148,6 +148,8 @@ Você pode acessar o deploy aqui:
 https://deploy-klever.herokuapp.com/
 ```
 
+Instale a extensão [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=pt-BR) para visualizar melhor o JSON no navegador.
+
 ## Instalando Dependências
 
 Após clonar o projeto, utilize na pasta raiz o comando:
