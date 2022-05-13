@@ -1,23 +1,23 @@
-// const { model } = require('mongoose');
-// const TransactionSchema = require('../schemas/TransactionSchema');
+const { model } = require('mongoose');
+const TransactionSchema = require('../schemas/TransactionSchema');
 
-// const transactionModel = model('transactions', TransactionSchema);
+const transactionModel = model('transactions', TransactionSchema);
 
-// const createTransaction = async (obj) => {
-// 	await transactionModel.create(obj);
+const createTransaction = async (obj) => {
+	await transactionModel.create(obj);
 
-// 	const transactions = getTransactions();
+	const transactions = getTransactions();
 
-// 	return transactions;
-// };
+	return transactions;
+};
 
-// const getTransactions = async () => {
-// 	const transactions = await transactionModel.find({}, { _id: 0 });
+const getTransactions = async () => {
+	const transactions = await transactionModel.find({}, { _id: 0 });
 
-// 	return { utxos: transactions };
-// };
+	return { utxos: transactions };
+};
 
 
-// module.exports = {
-// 	createTransaction,
-// };
+module.exports = {
+	createTransaction,
+};
