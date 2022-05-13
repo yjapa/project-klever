@@ -177,8 +177,9 @@ PORT= // porta para rodar a API
 MONGO_INITDB_ROOT_USERNAME= // nome de usuário do banco mongoDB
 MONGO_INITDB_ROOT_PASSWORD= // senha de usuário do banco mongoDB
 ```
-
 Caso já possua um usuário no mongoDB, utilize as váriaveis de ambiente para configurar a sua conexão com o banco.
+
+Digite `npm test` para verificar se está tudo certo com a aplicação.
 
 ## Executando aplicação
 
