@@ -6,7 +6,7 @@ COPY package.json .
 
 RUN npm install
 
-RUN npm run compose:up
+RUN npm compose:up
 
 COPY . .
 
