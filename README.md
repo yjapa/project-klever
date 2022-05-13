@@ -145,7 +145,7 @@ A aplicação foi feita com deploy no `Heroku`. Ao entrar no deploy da aplicaç�
 
 Você pode acessar o deploy aqui: 
 ```bash
-https://klever-challenger.herokuapp.com/
+https://deploy-klever.herokuapp.com/
 ```
 
 ## Instalando Dependências
