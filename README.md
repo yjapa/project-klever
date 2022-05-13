@@ -71,7 +71,7 @@ Retorno:
 ```
 ### Transaction Details
 
-Retorna dados "normalizados" sobre a transação.
+Retorna dados `normalizados` sobre a transação.
 
 ```bash
 https://blockbook-bitcoin.tronwallet.me/api/v2/tx/{tx}
