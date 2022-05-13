@@ -139,6 +139,15 @@ A aplicação foi desenvolvida com os seguintes requisitos:
 Back-end:
 > Desenvolvido usando: Node.js, Express , Mongoose, MongoDB, Axios, Jest!
 
+## Deploy
+
+A aplicação foi feita com deploy no `Heroku`. Ao entrar no deploy da aplicação, a rota padrão `/` mostrará cada um dos endpoints e suas respectivas descrições. Todas os endpoints podem ser acessados, exceto `/send`.
+
+Você pode acessar o deploy aqui: 
+```bash
+https://deploy-klever.herokuapp.com/
+```
+
 ## Instalando Dependências
 
 Após clonar o projeto, utilize na pasta raiz o comando:
