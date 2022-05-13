@@ -174,8 +174,8 @@ Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambien
 
 ```bash
 PORT= // porta para rodar a API
-MONGO_INITDB_ROOT_USERNAME= // nome de usuário do banco mongoDB
-MONGO_INITDB_ROOT_PASSWORD= // senha de usuário do banco mongoDB
+MONGO_INITDB_ROOT_USERNAME= // nome de usuário
+MONGO_INITDB_ROOT_PASSWORD= // senha de usuário
 ```
 Caso já possua um usuário no mongoDB, utilize as váriaveis de ambiente para configurar a sua conexão com o banco.
 
