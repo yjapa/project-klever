@@ -11,7 +11,7 @@ const getSummary = async () => {
 				route: '/balance/{address}',
 			},
 			{
-				description: 'Enviar transações de bct',
+				description: 'Enviar transações de btc',
 				route: '/send',
 			},
 			{
