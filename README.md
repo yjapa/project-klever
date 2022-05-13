@@ -145,16 +145,26 @@ Após clonar o projeto, utilize na pasta raiz o comando:
 npm install
 ```
 
-## Variáveis de Ambiente
+## Docker Compose
 
-Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambiente e inicializar a API na porta que desejar. Acrescente tambén a variavel NODE_ENV abaixo:
-
+O projeto contém um arquivo `docker-compose.yml`. Utilize na raiz do projeto o comando: 
 ```bash
-PORT=3001
-NODE_ENV=mongodb://localhost:27017/klever_challenger_test
+npm run compose:up
 ```
 
-A váriavel NODE_ENV garante que os testes da aplicação serão feitos no banco de testes.
+Este arquivo cria um container com uma imagem do mongoDB no docker. O usuário e senha padrão do arquivo é respectivamente "root" e "password".
+
+## Variáveis de Ambiente
+
+Na raiz do projeto, crie um arquivo .env para configurar as variáveis de ambiente e inicializar a API.
+
+```bash
+PORT= // porta para rodar a API
+MONGO_INITDB_ROOT_USERNAME= // nome de usuário do banco mongoDB
+MONGO_INITDB_ROOT_PASSWORD= // senha de usuário do banco mongoDB
+```
+
+Caso já possua um usuário no mongoDB, utilize as váriaveis de ambiente para configurar a sua conexão com o banco.
 
 ## Executando aplicação
 
