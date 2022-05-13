@@ -4,9 +4,10 @@
   "description": "Klever Challenger API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "nodemon ./index.js docker-compose -d up",
     "test": "NODE_ENV='mongodb://localhost:27017/klever_challenger_test' jest",
-    "lint": "./node_modules/.bin/eslint . --ext .js"
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "compose:up": "docker-compose up -d"
   },
   "author": "Wesley Yudi",
   "license": "ISC",
