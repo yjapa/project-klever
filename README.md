@@ -137,7 +137,7 @@ A aplicação foi desenvolvida com os seguintes requisitos:
 ## Técnologias usadas
 
 Back-end:
-> Desenvolvido usando: Node.js, Express , Mongoose, MongoDB, Axios, Jest!
+> Desenvolvido usando: Node.js, Express, Docker, Mongoose, MongoDB, Axios, Jest!
 
 ## Deploy
 
